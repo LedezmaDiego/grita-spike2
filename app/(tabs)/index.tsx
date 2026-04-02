@@ -1,11 +1,22 @@
-import { Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
-export default function App() {
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
+
+const PantallaPrincipal = () => {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ fontSize: 22 }}>
-        ¡Hola React Native con Expo + Bun! 👋
-      </Text>
-    </View>
+    <ThemedView style={styles.contenedor}>
+      <ThemedText>¡Hola React Native con Expo + Bun! 👋</ThemedText>
+    </ThemedView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  contenedor: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+export default PantallaPrincipal;
