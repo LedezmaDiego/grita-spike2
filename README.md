@@ -1,50 +1,136 @@
-# Welcome to your Expo app 👋
+# Lista de Compras (App Mobile)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Esta es una aplicación simple para crear y gestionar una lista de compras.
 
-## Get started
+Funcionalidades principales:
 
-1. Install dependencies
+- Agregar productos
+- Marcar productos como completados
+- Eliminar productos
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## Requisitos previos
 
-   ```bash
-   npx expo start
-   ```
+Antes de comenzar, es necesario instalar los siguientes programas:
 
-In the output, you'll find options to open the app in a
+### 1. Node.js
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Descargar desde: https://nodejs.org  
+Instalar la versión recomendada (LTS).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Node.js incluye npm, pero en este proyecto se utiliza Bun como gestor de paquetes.
 
-## Get a fresh project
+### 2. Bun
 
-When you're ready, run:
+Instalar Bun desde: https://bun.sh
+
+### 3. Git
+
+Descargar desde: https://git-scm.com/
+
+### 4. Expo Go (opcional, para usar en celular)
+
+- Android: disponible en Play Store
+- iOS: disponible en App Store
+
+---
+
+## Descargar el proyecto
+
+1. Abrir una terminal (cmd, PowerShell o Terminal).
+2. Ejecutar el siguiente comando:
 
 ```bash
-npm run reset-project
+git clone https://github.com/LedezmaDiego/grita-spike2.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Ingresar a la carpeta del proyecto:
 
-## Learn more
+```bash
+cd grita-spike2
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Instalación
 
-## Join the community
+Dentro de la carpeta del proyecto, ejecutar:
 
-Join our community of developers creating universal apps.
+```bash
+bun install
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Este proceso instalará todas las dependencias necesarias.
+
+---
+
+## Ejecución
+
+Para iniciar la aplicación, ejecutar:
+
+```bash
+bun start
+```
+
+En la terminal aparecerá un código QR y opciones para abrir la aplicación.
+
+---
+
+## Formas de abrir la aplicación
+
+### Opción 1: Dispositivo móvil
+
+1. Abrir la aplicación Expo Go.
+2. Escanear el código QR que aparece en la terminal.
+
+### Opción 2: Navegador web
+
+Abrir la dirección que aparece en la terminal, por ejemplo:
+
+```
+http://localhost:8081
+```
+
+---
+
+## Uso de la aplicación
+
+- Escribir el nombre de un producto en el campo de texto.
+- Presionar el botón "Agregar" para añadirlo a la lista.
+- Presionar sobre un producto para marcarlo como completado.
+- Mantener presionado un producto para eliminarlo.
+
+---
+
+## Solución de problemas
+
+### Problemas al instalar dependencias
+
+Ejecutar:
+
+```bash
+bun install --force
+```
+
+### Problemas al abrir en el celular
+
+- Verificar que el dispositivo y la computadora estén en la misma red WiFi.
+- Reiniciar el servidor con:
+
+```bash
+bunx expo start -c
+```
+
+---
+
+## Tecnologías utilizadas
+
+- React Native
+- Expo
+
+---
+
+## Notas finales
+
+Este proyecto está pensado como una aplicación de ejemplo para prácticas de desarrollo con React Native y Expo.
