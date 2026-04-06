@@ -1,5 +1,7 @@
 import { FlatList, View } from "react-native";
 import { Text } from "react-native-paper";
+import { SPACING } from "../../constantes/spacing";
+import { TEXTOS } from "../../constantes/textos";
 import { ItemListaDeCompras } from "../../tipos/itemListaDeCompras";
 import ItemDeListaDeCompras from "./ItemDeListaDeCompras";
 
@@ -17,8 +19,8 @@ export default function ListaDeCompras({
   if (items.length === 0) {
     return (
       <View style={{ flex: 1 }}>
-        <Text style={{ textAlign: "center", marginTop: 20 }}>
-          Sin productos. ¡Agregá el primero! 😊
+        <Text style={{ textAlign: "center", marginTop: SPACING.lg }}>
+          {TEXTOS.lista.vacia}
         </Text>
       </View>
     );

@@ -1,5 +1,7 @@
 import { View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
+import { SPACING } from "../../constantes/spacing";
+import { TEXTOS } from "../../constantes/textos";
 import useFormularioItem from "../../hooks/useFormularioItem";
 
 type Props = {
@@ -22,10 +24,10 @@ export default function FormularioParaItemNuevo({
   return (
     <View
       style={{
-        marginTop: 12,
+        marginTop: SPACING.md,
         flexDirection: "row",
         alignItems: "center",
-        gap: 8,
+        gap: SPACING.sm,
       }}
     >
       <TextInput
@@ -37,7 +39,7 @@ export default function FormularioParaItemNuevo({
       />
 
       <Button mode="contained" onPress={handleSubmit}>
-        Agregar
+        {TEXTOS.botones.agregar}
       </Button>
     </View>
   );

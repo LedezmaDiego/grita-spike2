@@ -1,19 +1,7 @@
 import { PropsWithChildren } from "react";
 import { View } from "react-native";
-import { useTheme } from "react-native-paper";
+import { estilosGenerales } from "../../estilos/estilosGenerales";
 
 export default function Contenedor({ children }: PropsWithChildren) {
-  const theme = useTheme();
-
-  return (
-    <View
-      style={{
-        flex: 1,
-        padding: 16,
-        backgroundColor: theme.colors.background,
-      }}
-    >
-      {children}
-    </View>
-  );
+  return <View style={estilosGenerales.contenedor}>{children}</View>;
 }

@@ -1,4 +1,5 @@
 import { List } from "react-native-paper";
+import { obtenerEstiloDeTitulo } from "../../estilos/estilosItemLista";
 import { ItemListaDeCompras } from "../../tipos/itemListaDeCompras";
 
 type Props = {
@@ -15,10 +16,7 @@ export default function ItemDeListaDeCompras({
   return (
     <List.Item
       title={item.nombre}
-      titleStyle={{
-        textDecorationLine: item.estaCompletado ? "line-through" : "none",
-        color: item.estaCompletado ? "#777" : "#000",
-      }}
+      titleStyle={obtenerEstiloDeTitulo(item.estaCompletado)}
       onPress={() => onPress(item.id)}
       onLongPress={() => onLongPress(item.id)}
       right={() => (
